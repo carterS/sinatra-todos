@@ -1,1 +1,8 @@
 <h1>Here's all the things to do:</h1>
+
+<% @todos.each do |todo| %>
+	<%= todo.item %>
+	<form methods="POST" action="/complete">
+		<input name=<%="#{todo.id}"%> type='button' value=<%="#{todo.id}"%>>
+	</form> 
+<% end %>

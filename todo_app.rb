@@ -13,5 +13,17 @@ Dotenv.load
 set :database, ENV['DATABASE_URL']
 
 get '/' do
+	@todos = Todo.all
+  p params
   erb :index
 end
+
+post '/' do
+	p params
+end
+
+post '/complete' do
+	
+end
+
+
